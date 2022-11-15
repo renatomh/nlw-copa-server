@@ -8,8 +8,13 @@ This project was developed during the RocketSeat's Next Level Week - Copa event.
 
 ## 🔍 Features
 
+* Users register/login;
 * Available pools listing;
 * New pools creation;
+* Users count;
+* Available games listing;
+* New guesses creation;
+* Available guesses listing;
 
 ## 💹 Extras
 
@@ -21,6 +26,8 @@ During the development of this project, the following techologies were used:
 
 - [Node.js](https://nodejs.org/en/)
 - [Fastify](https://www.fastify.io/)
+- [Fasfity JWT](https://github.com/fastify/fastify-jwt)
+- [Fastify env](https://github.com/fastify/fastify-env)
 - [Prisma](https://www.prisma.io/)
 - [Mermaid.js](https://mermaid-js.github.io/mermaid/#/)
 - [TypeScript](https://www.typescriptlang.org/)
@@ -64,7 +71,7 @@ In order to deploy the app online, there are some steps to be done.
 ...
 
 ### Documentation:
-* 
+* [fastify-env](https://github.com/fastify/fastify-env)
 
 ## 📄 License
 
