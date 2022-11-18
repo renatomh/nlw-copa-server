@@ -233,6 +233,7 @@ export async function poolRoutes(fastify: FastifyInstance) {
             score: true,
             user: {
               select: {
+                name: true,
                 avatarUrl: true,
               }
             }
