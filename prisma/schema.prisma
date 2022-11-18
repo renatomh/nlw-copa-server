@@ -30,6 +30,7 @@ model Participant {
   id     String @id @default(cuid())
   userId String
   poolId String
+  score  Int    @default(0)
 
   guessees Guess[]
   user     User    @relation(fields: [userId], references: [id])
@@ -56,6 +57,8 @@ model Game {
 
   firstTeamCountryCode  String
   secondTeamCountryCode String
+  firstTeamPoints       Int?
+  secondTeamPoints      Int?
 
   guesses Guess[]
 }
@@ -68,6 +71,7 @@ model Guess {
   createdAt        DateTime @default(now())
   gameId           String
   participantId    String
+  score            Int      @default(0)
 
   participant Participant @relation(fields: [participantId], references: [id])
   game        Game        @relation(fields: [gameId], references: [id])

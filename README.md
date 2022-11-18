@@ -40,6 +40,18 @@ During the development of this project, the following techologies were used:
 $ yarn
 ```
 
+### In order to create new migrations for the database, the following command should be used. After executing it, you should provide the nem migration name.
+
+```bash
+$ npx prisma migrate dev
+```
+
+### If you want to seed more data to the datatable with *seed* files, the following command must be used, replacing the "*prisma/seed.ts*" section, with the desired file name and path.
+
+```bash
+$ npx tsx prisma/seed.ts
+```
+
 ## 🌐 Setting up config files
 
 Create an *.env* file on the root directory, with all needed variables, credentials and API keys, according to the sample provided (*.env example*).
