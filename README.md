@@ -18,7 +18,9 @@ This project was developed during the RocketSeat's Next Level Week - Copa event.
 
 ## 💹 Extras
 
-* 
+* New games creation;
+* Pools ranking listing;
+* Games results setting (with auto score updating for guesses and participants);
 
 ## 🛠 Technologies
 

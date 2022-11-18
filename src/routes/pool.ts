@@ -172,7 +172,7 @@ export async function poolRoutes(fastify: FastifyInstance) {
         id
       },
       include: {
-        // Getting number of participantes
+        // Getting number of participants
         _count: {
           select: {
             participants: true,
@@ -202,4 +202,45 @@ export async function poolRoutes(fastify: FastifyInstance) {
 
     return { pool }
   });
+
+  // Route to get pool ranking
+  fastify.get('/pools/:id/ranking', {
+    onRequest: [authenticate],
+  }, async (request) => {
+    const getPoolParams = z.object({
+      id: z.string(),
+    })
+    const { id } = getPoolParams.parse(request.params)
+
+    const pool = await prisma.pool.findUnique({
+      where: {
+        id,
+      },
+      include: {
+        // Getting number of participants
+        _count: {
+          select: {
+            participants: true,
+          }
+        },
+        // Getting participants data, including score
+        participants: {
+          orderBy: {
+            score: 'desc',
+          },
+          select: {
+            id: true,
+            score: true,
+            user: {
+              select: {
+                avatarUrl: true,
+              }
+            }
+          },
+        },
+      }
+    })
+    
+    return { pool }
+  })
 };
