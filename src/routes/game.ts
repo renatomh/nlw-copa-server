@@ -177,7 +177,7 @@ export async function gameRoutes(fastify: FastifyInstance) {
           id: participant.id,
         },
         data: {
-          score: score[0]._sum.score ? score[0]._sum.score : 0,
+          score: score[0]?._sum.score ? score[0]._sum.score : 0,
         }
       });
     };
