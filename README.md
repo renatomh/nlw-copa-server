@@ -80,9 +80,17 @@ $ npx prisma generate
 
 ## 🔨 Project's *Build* for *Deploy*
 
-In order to deploy the app online, there are some steps to be done.
+In order to deploy the app online, there are some steps to be done. First, you must build the application using the following command:
 
-...
+```bash
+$ yarn build
+```
+
+After that, you can run the production server with the command below:
+
+```bash
+$ yarn start
+```
 
 ### Documentation:
 * [fastify-env](https://github.com/fastify/fastify-env)

@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+import axios from 'axios';
 import { FastifyInstance } from 'fastify';
 import { z } from 'zod';
 import { prisma } from '../lib/prisma';
@@ -11,21 +11,30 @@ export async function authRoutes(fastify: FastifyInstance) {
     return { user: request.user};
   });
   
-  fastify.post('/users', async (request) => {
+  fastify.post('/users', async (request, reply) => {
     const createUserBody = z.object({
       access_token: z.string(),
     })
     
     const { access_token } = createUserBody.parse(request.body);
 
-    const userResponse = await fetch('https://www.googleapis.com/oauth2/v2/userinfo', {
-      method: 'GET',
+    /* Getting data from the user's access token */
+    const userResponse = await axios.get('https://www.googleapis.com/oauth2/v2/userinfo', {
       headers: {
         Authorization: `Bearer ${access_token}`,
       }
+    }).then(res => {
+      /* If everything is ok, we return the data */
+      return res.data;
+    }).catch(err => {
+      /* If an error occurs, we inform and return the request */
+      console.log(err);
+      return reply.status(401).send({
+        message: "The access token is not valid."
+      })
     });
 
-    const userData = await userResponse.json();
+    const userData = await userResponse;
 
     /* User info interface */
     const userInfoSchema = z.object({
