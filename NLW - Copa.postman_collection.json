@@ -1,0 +1,1143 @@
+{
+	"info": {
+		"_postman_id": "ddb37098-bca6-4a0a-9c8c-65ef1ec98a2f",
+		"name": "NLW - Copa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9267120"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Sign In/Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"access_token\": \"ya29.a0AeTM1if-r-tuKU0MM_3NhGhf0q2C1DBPivtd60aFQ1SiFFeoemaYQAq7cMO3FTwugrlO9DtquDnMHxmSYIna9ynhzG6ZwmqGy66iVfd2_g9rNwHVZx3XplJpQXlgE6KBdiauemTW1FyhAiAshgLePCYc07ZgrgaCgYKAQ8SARMSFQHWtWOmfo872qKAcnJrg3Psq95obQ0165\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"access_token\": \"ya29.a0AeTM1ifoquC43vpUqqClEqaTQ9EPivbQqQBlOl-c7BkbekOPU6lOa3XGOIuctBlAgcFq2dgtsE6-SX-KHj4dugXerjRlIW9VtKFjk9FK4VS5vHRPMFzuhaJlTMZaw52kmyHrn54kK4oFT1_RG3h65xWcOGCIqAaCgYKAToSARMSFQHWtWOm9X-m4GouQOZs8ezIyci2OA0165\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/users",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "360"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Nov 2022 14:56:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmVuYXRvIE1hcmlubyBIZW56IiwiYXZhdGFyVXJsIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUxtNXd1ME9reldINXMweFV6V3JxaEo0MHhBWFFMd3RIeEQxLWFSUF9WbWY2dz1zOTYtYyIsInN1YiI6ImNsYWlibGRucjAwMDB2cmpjZjN1aWRmcGQiLCJpYXQiOjE2Njg1MjQyMDEsImV4cCI6MTY2OTEyOTAwMX0.wfrws0WnmEn7aebbfYEIjoy3Auj1qHoWMqFVCcabAFg\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Me",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/me",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"me"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/me",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "209"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 19 Nov 2022 00:16:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"name\": \"Renato Marino Henz\",\n        \"avatarUrl\": \"https://lh3.googleusercontent.com/a/ALm5wu0OkzWH5s0xUzWrqhJ40xAXQLwtHxD1-aRP_Vmf6w=s96-c\",\n        \"sub\": \"claibldnr0000vrjcf3uidfpd\",\n        \"iat\": 1668816923,\n        \"exp\": 1669421723\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Pools",
+			"item": [
+				{
+					"name": "Get Pools Count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pools/count",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pools",
+								"count"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/pools/count",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"pools",
+										"count"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "11"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 11 Nov 2022 00:46:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "List Pools",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/pools",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pools"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/pools",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"pools"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "430"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Nov 2022 17:41:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"pools\": [\n        {\n            \"id\": \"claifqw8j0001vr5oipzbdseq\",\n            \"title\": \"Bolão da Amizade\",\n            \"code\": \"FYT28T\",\n            \"createdAt\": \"2022-11-15T16:35:09.619Z\",\n            \"ownerId\": \"claibldnr0000vrjcf3uidfpd\",\n            \"participants\": [\n                {\n                    \"id\": \"claifqw8j0003vr5opx4gkiim\",\n                    \"user\": {\n                        \"avatarUrl\": \"https://lh3.googleusercontent.com/a/ALm5wu0OkzWH5s0xUzWrqhJ40xAXQLwtHxD1-aRP_Vmf6w=s96-c\"\n                    }\n                }\n            ],\n            \"owner\": {\n                \"id\": \"claibldnr0000vrjcf3uidfpd\",\n                \"name\": \"Renato Marino Henz\"\n            },\n            \"_count\": {\n                \"participants\": 1\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Pool",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/pools/claifqw8j0001vr5oipzbdseq",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pools",
+								"claifqw8j0001vr5oipzbdseq"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/pools/claifqw8j0001vr5oipzbdseq",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"pools",
+										"claifqw8j0001vr5oipzbdseq"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "427"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Nov 2022 17:47:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"pool\": {\n        \"id\": \"claifqw8j0001vr5oipzbdseq\",\n        \"title\": \"Bolão da Amizade\",\n        \"code\": \"FYT28T\",\n        \"createdAt\": \"2022-11-15T16:35:09.619Z\",\n        \"ownerId\": \"claibldnr0000vrjcf3uidfpd\",\n        \"participants\": [\n            {\n                \"id\": \"claifqw8j0003vr5opx4gkiim\",\n                \"user\": {\n                    \"avatarUrl\": \"https://lh3.googleusercontent.com/a/ALm5wu0OkzWH5s0xUzWrqhJ40xAXQLwtHxD1-aRP_Vmf6w=s96-c\"\n                }\n            }\n        ],\n        \"owner\": {\n            \"id\": \"claibldnr0000vrjcf3uidfpd\",\n            \"name\": \"Renato Marino Henz\"\n        },\n        \"_count\": {\n            \"participants\": 1\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Pool",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Bolão da Amizade\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pools",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pools"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK - Not Authenticated",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Bolão da Amizade\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/pools",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"pools"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "17"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 11 Nov 2022 01:14:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"UWNK0M\"\n}"
+						},
+						{
+							"name": "OK - Authenticated",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Bolão da Amizade\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/pools",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"pools"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "17"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Nov 2022 16:35:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"FYT28T\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get Users Count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/users/count",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"count"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/users/count",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"users",
+										"count"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "11"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 11 Nov 2022 01:16:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Games",
+			"item": [
+				{
+					"name": "List Games",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/pools/claifqw8j0001vr5oipzbdseq/games",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pools",
+								"claifqw8j0001vr5oipzbdseq",
+								"games"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/pools/claifqw8j0001vr5oipzbdseq/games",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"pools",
+										"claifqw8j0001vr5oipzbdseq",
+										"games"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "8951"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Nov 2022 18:42:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"games\": [\n        {\n            \"id\": \"clamu8bgr002kvrksuwneppow\",\n            \"date\": \"2022-12-02T19:00:00.930Z\",\n            \"firstTeamCountryCode\": \"RS\",\n            \"secondTeamCountryCode\": \"CH\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bgx002mvrkskox6q488\",\n            \"date\": \"2022-12-02T19:00:00.930Z\",\n            \"firstTeamCountryCode\": \"CM\",\n            \"secondTeamCountryCode\": \"BR\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bg2002gvrks4po5zpyd\",\n            \"date\": \"2022-12-02T15:00:00.930Z\",\n            \"firstTeamCountryCode\": \"GH\",\n            \"secondTeamCountryCode\": \"UY\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bg6002ivrksgll39ttt\",\n            \"date\": \"2022-12-02T15:00:00.930Z\",\n            \"firstTeamCountryCode\": \"KR\",\n            \"secondTeamCountryCode\": \"PT\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bfb002cvrks1c10rg03\",\n            \"date\": \"2022-12-01T19:00:00.930Z\",\n            \"firstTeamCountryCode\": \"JP\",\n            \"secondTeamCountryCode\": \"ES\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bfw002evrksqv6gh65j\",\n            \"date\": \"2022-12-01T19:00:00.930Z\",\n            \"firstTeamCountryCode\": \"CR\",\n            \"secondTeamCountryCode\": \"DE\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bf10028vrks6q5wthvt\",\n            \"date\": \"2022-12-01T15:00:00.930Z\",\n            \"firstTeamCountryCode\": \"HR\",\n            \"secondTeamCountryCode\": \"BE\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bf6002avrks0huxuhdf\",\n            \"date\": \"2022-12-01T15:00:00.930Z\",\n            \"firstTeamCountryCode\": \"CA\",\n            \"secondTeamCountryCode\": \"MA\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8beq0024vrksii9k53yx\",\n            \"date\": \"2022-11-30T19:00:00.930Z\",\n            \"firstTeamCountryCode\": \"PL\",\n            \"secondTeamCountryCode\": \"AR\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bew0026vrks43fmt1b6\",\n            \"date\": \"2022-11-30T19:00:00.930Z\",\n            \"firstTeamCountryCode\": \"SA\",\n            \"secondTeamCountryCode\": \"MX\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8beg0020vrksujfrr0s2\",\n            \"date\": \"2022-11-30T15:00:00.930Z\",\n            \"firstTeamCountryCode\": \"AU\",\n            \"secondTeamCountryCode\": \"DK\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bem0022vrksntevrv4z\",\n            \"date\": \"2022-11-30T15:00:00.930Z\",\n            \"firstTeamCountryCode\": \"TN\",\n            \"secondTeamCountryCode\": \"FR\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8be7001wvrksv9br5s2l\",\n            \"date\": \"2022-11-29T19:00:00.930Z\",\n            \"firstTeamCountryCode\": \"gb-wls\",\n            \"secondTeamCountryCode\": \"GB\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bec001yvrksx77gbobk\",\n            \"date\": \"2022-11-29T19:00:00.930Z\",\n            \"firstTeamCountryCode\": \"IR\",\n            \"secondTeamCountryCode\": \"US\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bdy001svrks3tzsrmsx\",\n            \"date\": \"2022-11-29T15:00:00.930Z\",\n            \"firstTeamCountryCode\": \"EC\",\n            \"secondTeamCountryCode\": \"SN\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8be3001uvrksv46pbknw\",\n            \"date\": \"2022-11-29T15:00:00.930Z\",\n            \"firstTeamCountryCode\": \"NL\",\n            \"secondTeamCountryCode\": \"QA\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bdu001qvrks28iwe2qt\",\n            \"date\": \"2022-11-28T19:00:00.930Z\",\n            \"firstTeamCountryCode\": \"PT\",\n            \"secondTeamCountryCode\": \"UY\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bdp001ovrksptid4jh7\",\n            \"date\": \"2022-11-28T16:00:00.930Z\",\n            \"firstTeamCountryCode\": \"BR\",\n            \"secondTeamCountryCode\": \"CH\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bdk001mvrkstx6t4pi4\",\n            \"date\": \"2022-11-28T13:00:00.930Z\",\n            \"firstTeamCountryCode\": \"KR\",\n            \"secondTeamCountryCode\": \"GH\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bdg001kvrksp36xpjj7\",\n            \"date\": \"2022-11-28T10:00:00.930Z\",\n            \"firstTeamCountryCode\": \"CM\",\n            \"secondTeamCountryCode\": \"RS\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bdb001ivrksufdwbhpy\",\n            \"date\": \"2022-11-27T19:00:00.930Z\",\n            \"firstTeamCountryCode\": \"ES\",\n            \"secondTeamCountryCode\": \"CH\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bd7001gvrksvn8jbg51\",\n            \"date\": \"2022-11-27T16:00:00.930Z\",\n            \"firstTeamCountryCode\": \"HR\",\n            \"secondTeamCountryCode\": \"CA\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bd2001evrksbmznkl1t\",\n            \"date\": \"2022-11-27T13:00:00.930Z\",\n            \"firstTeamCountryCode\": \"BE\",\n            \"secondTeamCountryCode\": \"MA\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bcx001cvrksnx4n7lfm\",\n            \"date\": \"2022-11-27T10:00:00.930Z\",\n            \"firstTeamCountryCode\": \"JP\",\n            \"secondTeamCountryCode\": \"CR\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bcs001avrksb3ewh1xt\",\n            \"date\": \"2022-11-26T19:00:00.930Z\",\n            \"firstTeamCountryCode\": \"AR\",\n            \"secondTeamCountryCode\": \"MX\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bcn0018vrksio3msgxs\",\n            \"date\": \"2022-11-26T16:00:00.930Z\",\n            \"firstTeamCountryCode\": \"FR\",\n            \"secondTeamCountryCode\": \"DK\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bci0016vrks4aa8fqaj\",\n            \"date\": \"2022-11-26T13:00:00.930Z\",\n            \"firstTeamCountryCode\": \"PL\",\n            \"secondTeamCountryCode\": \"SA\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bce0014vrksaxy1k2k7\",\n            \"date\": \"2022-11-26T10:00:00.930Z\",\n            \"firstTeamCountryCode\": \"TN\",\n            \"secondTeamCountryCode\": \"AU\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bc80012vrks3nlknj7l\",\n            \"date\": \"2022-11-25T19:00:00.930Z\",\n            \"firstTeamCountryCode\": \"GB\",\n            \"secondTeamCountryCode\": \"US\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bc30010vrkse4db2qc0\",\n            \"date\": \"2022-11-25T16:00:00.930Z\",\n            \"firstTeamCountryCode\": \"NL\",\n            \"secondTeamCountryCode\": \"EC\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bby000yvrksh7ccdawb\",\n            \"date\": \"2022-11-25T13:00:00.930Z\",\n            \"firstTeamCountryCode\": \"QA\",\n            \"secondTeamCountryCode\": \"SN\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bbt000wvrksoc195isr\",\n            \"date\": \"2022-11-25T10:00:00.930Z\",\n            \"firstTeamCountryCode\": \"gb-wls\",\n            \"secondTeamCountryCode\": \"IR\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bbn000uvrksvi6jw4cy\",\n            \"date\": \"2022-11-24T19:00:00.930Z\",\n            \"firstTeamCountryCode\": \"BR\",\n            \"secondTeamCountryCode\": \"RS\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bbi000svrksxbswxbtd\",\n            \"date\": \"2022-11-24T16:00:00.930Z\",\n            \"firstTeamCountryCode\": \"PT\",\n            \"secondTeamCountryCode\": \"GH\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bbc000qvrksablp8519\",\n            \"date\": \"2022-11-24T13:00:00.930Z\",\n            \"firstTeamCountryCode\": \"UY\",\n            \"secondTeamCountryCode\": \"KR\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8bb6000ovrksnuqlgjf6\",\n            \"date\": \"2022-11-24T10:00:00.930Z\",\n            \"firstTeamCountryCode\": \"CH\",\n            \"secondTeamCountryCode\": \"CM\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8b9r0005vrkspa2z4bfd\",\n            \"date\": \"2022-11-23T19:00:00.930Z\",\n            \"firstTeamCountryCode\": \"BE\",\n            \"secondTeamCountryCode\": \"CA\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8b9r0006vrks4hopxsqe\",\n            \"date\": \"2022-11-23T16:00:00.930Z\",\n            \"firstTeamCountryCode\": \"ES\",\n            \"secondTeamCountryCode\": \"CR\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8b9r0008vrks3gpljpx5\",\n            \"date\": \"2022-11-23T13:00:00.930Z\",\n            \"firstTeamCountryCode\": \"DE\",\n            \"secondTeamCountryCode\": \"JP\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8b9r0007vrksh8yb5gd8\",\n            \"date\": \"2022-11-23T10:00:00.930Z\",\n            \"firstTeamCountryCode\": \"MA\",\n            \"secondTeamCountryCode\": \"HR\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8b9r0002vrks2jz2oo53\",\n            \"date\": \"2022-11-22T19:00:00.930Z\",\n            \"firstTeamCountryCode\": \"FR\",\n            \"secondTeamCountryCode\": \"AU\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8b9r0004vrks53mi9pju\",\n            \"date\": \"2022-11-22T16:00:00.930Z\",\n            \"firstTeamCountryCode\": \"MX\",\n            \"secondTeamCountryCode\": \"PL\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8b9r0009vrksd74hryia\",\n            \"date\": \"2022-11-22T13:00:00.930Z\",\n            \"firstTeamCountryCode\": \"DK\",\n            \"secondTeamCountryCode\": \"TN\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8b9r0000vrks2c5a8od9\",\n            \"date\": \"2022-11-22T10:00:00.930Z\",\n            \"firstTeamCountryCode\": \"AR\",\n            \"secondTeamCountryCode\": \"SA\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8b9r000bvrksmsr0nxgo\",\n            \"date\": \"2022-11-21T19:00:00.930Z\",\n            \"firstTeamCountryCode\": \"US\",\n            \"secondTeamCountryCode\": \"gb-wls\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8b9r0003vrksdbsu6yff\",\n            \"date\": \"2022-11-21T16:00:00.930Z\",\n            \"firstTeamCountryCode\": \"SN\",\n            \"secondTeamCountryCode\": \"NL\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8b9r000avrksnf1hfjn7\",\n            \"date\": \"2022-11-21T13:00:00.930Z\",\n            \"firstTeamCountryCode\": \"GB\",\n            \"secondTeamCountryCode\": \"IR\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        },\n        {\n            \"id\": \"clamu8b9r0001vrksd1cn5hqh\",\n            \"date\": \"2022-11-20T16:00:00.930Z\",\n            \"firstTeamCountryCode\": \"QA\",\n            \"secondTeamCountryCode\": \"EC\",\n            \"firstTeamPoints\": null,\n            \"secondTeamPoints\": null,\n            \"guess\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Game",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2022-11-20T16:00:00.930Z\",\r\n    \"firstTeamCountryCode\": \"GB\",\r\n    \"secondTeamCountryCode\": \"IR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/games",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"games"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"date\": \"2022-11-20T16:00:00.930Z\",\r\n    \"firstTeamCountryCode\": \"GB\",\r\n    \"secondTeamCountryCode\": \"IR\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/games",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"games"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "181"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Nov 2022 19:02:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"game\": {\n        \"id\": \"clamvc5yo0000vrm0x4l4nbmq\",\n        \"date\": \"2022-11-20T16:00:00.930Z\",\n        \"firstTeamCountryCode\": \"GB\",\n        \"secondTeamCountryCode\": \"IR\",\n        \"firstTeamPoints\": null,\n        \"secondTeamPoints\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Set Game Results",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstTeamPoints\": 2,\r\n    \"secondTeamPoints\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/games/clamu8b9r0000vrks2c5a8od9/result",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"games",
+								"clamu8b9r0000vrks2c5a8od9",
+								"result"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstTeamPoints\": 3,\r\n    \"secondTeamPoints\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/games/clamu8b9r0000vrks2c5a8od9/result",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"games",
+										"clamu8b9r0000vrks2c5a8od9",
+										"result"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "182"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Nov 2022 19:20:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"updatedGame\": {\n        \"id\": \"clamu8b9r0000vrks2c5a8od9\",\n        \"date\": \"2022-11-22T10:00:00.930Z\",\n        \"firstTeamCountryCode\": \"AR\",\n        \"secondTeamCountryCode\": \"SA\",\n        \"firstTeamPoints\": 3,\n        \"secondTeamPoints\": 1\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Guesses",
+			"item": [
+				{
+					"name": "Get Guesses Count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/guesses/count",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"guesses",
+								"count"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/guesses/count",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"guesses",
+										"count"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "11"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 11 Nov 2022 01:16:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Guess",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstTeamPoints\": 0,\r\n    \"secondTeamPoints\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pools/claifqw8j0001vr5oipzbdseq/games/clamu8b9r0001vrksd1cn5hqh/guesses",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pools",
+								"claifqw8j0001vr5oipzbdseq",
+								"games",
+								"clamu8b9r0001vrksd1cn5hqh",
+								"guesses"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstTeamPoints\": 2,\r\n    \"secondTeamPoints\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/pools/claifqw8j0001vr5oipzbdseq/games/clabrtqq00007vrmcvjlgbcx5/guesses",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"pools",
+										"claifqw8j0001vr5oipzbdseq",
+										"games",
+										"clabrtqq00007vrmcvjlgbcx5",
+										"guesses"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "content-length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Nov 2022 18:20:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Error - Guess Already Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstTeamPoints\": 2,\r\n    \"secondTeamPoints\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/pools/claifqw8j0001vr5oipzbdseq/games/clabrtqq00007vrmcvjlgbcx5/guesses",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"pools",
+										"claifqw8j0001vr5oipzbdseq",
+										"games",
+										"clabrtqq00007vrmcvjlgbcx5",
+										"guesses"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "content-length",
+									"value": "70"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 15 Nov 2022 18:20:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=72"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"You're already placed a guess for the game in this pool.\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

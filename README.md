@@ -92,6 +92,55 @@ After that, you can run the production server with the command below:
 $ yarn start
 ```
 
+### ⌨ Linux
+In Linux systems, you can use the use [PM2](https://pm2.keymetrics.io/) to run the app:
+
+```bash
+$ pm2 start build/src/server.js --watch --ignore-watch="prisma/dev.db" --name "nlw-copa-server"
+```
+
+We can also salve the PM2 process list and set it on system's startup:
+
+```bash
+$ pm2 save
+$ pm2 starttup -u [USER_NAME]
+```
+
+In order to serve the application with Nginx, it can be configured like so (adjusting the paths, server name, etc.):
+
+```
+# NLW Copa Server
+server {
+    listen 80;
+    server_name bolao-copa.mhsw.com.br;
+
+    location / {
+        proxy_pass http://localhost:3333;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        # Setting client's IP forwarding
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+```
+
+#### 📜 SSL/TLS
+
+You can also add security with SSL/TLS layer used for HTTPS protocol. One option is to use the free *Let's Encrypt* certificates.
+
+For this, you must [install the *Certbot*'s package](https://certbot.eff.org/instructions) and use its *plugin*, with the following commands (also, adjusting the srver name):
+
+```bash
+$ sudo apt install snapd # Installs snapd
+$ sudo snap install core; sudo snap refresh core # Ensures snapd version is up to date
+$ sudo snap install --classic certbot # Installs Certbot
+$ sudo ln -s /snap/bin/certbot /usr/bin/certbot # Prepares the Certbot command
+$ sudo certbot --nginx -d bolao-copa.mhsw.com.br
+```
+
 ### Documentation:
 * [fastify-env](https://github.com/fastify/fastify-env)
 
